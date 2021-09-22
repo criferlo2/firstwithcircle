@@ -13,6 +13,16 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo world $CODER_NAME
+  build:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - checkout
+      - run:
+        name: "echo an env var"
+        command: |
+          echo $CODER_NAME
+
 workflows:
   welcome:
     jobs:
@@ -21,3 +31,4 @@ workflows:
       - print_world:
           requires:
             - print_hello 
+      - build
