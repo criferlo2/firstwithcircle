@@ -8,7 +8,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: cimg/base:2020.01
+      - image: circleci/node:13.8.0
         auth:
           username: mydockerhub-user
           password: $CODER_NAME  # context / project UI env-var reference
