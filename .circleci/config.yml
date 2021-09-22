@@ -19,9 +19,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "echo an env var"
-        command: |
-          echo $CODER_NAME
+          name: "echo an env var"
+          command: |
+            echo $CODER_NAME
 
 workflows:
   welcome:
